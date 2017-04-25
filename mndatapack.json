@@ -1,0 +1,17 @@
+{
+    "blocksLastDay": 1250,
+    "averageBlockAwards": 3.59,
+    "totalMasterNodes": 348,
+    "currentUSDPrice": 0.47,
+    "income": {
+        "daily": 19.5,
+        "weekly": 136.5,
+        "monthly": 593.19,
+        "yearly": 7117.5
+    },
+    "averageBlockTime": 69.1,
+    "daysTillRewardDrop": 18,
+    "currentMasterNodeReward": 11.5,
+    "blocksSinceStartOfDay": 1096,
+    "masterNodeWorth": 9443.48
+}
