@@ -1,5 +1,7 @@
 # RpiIonWallet
-Raspberry Pi Ion Wallet Web Interface
+Raspberry Pi Ion Wallet Web Interface  
+
+ION DONATE: `iTfjqQrW1NJayiguWGo2L38s3wCFwvaTRa`  
 
 Setup
 ```
