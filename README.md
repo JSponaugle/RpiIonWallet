@@ -56,5 +56,6 @@ Place info into `coins.php`
 
 Setup Crontab
 `* * * * * php (dirtowebinterface)/grabmndp.php >> /dev/null 2>&1`
+`@reboot iond`
 
 visit `http://localhost/` on rpi
