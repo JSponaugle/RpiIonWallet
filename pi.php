@@ -57,7 +57,7 @@ if (isset($wallet)) {
     <link href="/css/custom.css?ts={!! strtotime('-1 hour') !!}" rel="stylesheet" type="text/css">
     <link href="/css/li.css?ts={!! strtotime('-1 hour') !!}" rel="stylesheet" type="text/css">
 </head>
-<meta http-equiv="refresh" content="5">
+<meta http-equiv="refresh" content="15">
 <body>
 <div class="container-fluid">
 	<?php
