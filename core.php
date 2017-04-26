@@ -2,6 +2,7 @@
 require_once('coins.php');
 $wallet = new jsonRPCClient('http://' . $ion['user'] . ':' . $ion['pass'] . '@127.0.0.1:' . $ion['port']);
 $info   = $address = $datapack = [];
+$piview = 1;
 if (isset($wallet)) {
 	try {
 		$info = $wallet->getinfo();
