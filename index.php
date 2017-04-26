@@ -1,13 +1,12 @@
 <?php
 require_once('core.php');
 include('layout/header.php');
-$piview = 2;
 ?>
     <meta http-equiv="refresh" content="15">
     <body>
     <div class="container-fluid">
 		<?php
-		if ($offline == true) {
+		if ($datapack['offline'] == true) {
 			?>
             <div class="row bar" style="text-align: center;">
                 <div class="col-xs-12 green" style="font-size: 35pt; font-weight: 800; color: red;">

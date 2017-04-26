@@ -6,7 +6,7 @@ include('layout/header.php');
     <body>
     <div class="container-fluid">
 		<?php
-		if ($offline == true) {
+		if ($datapack['offline'] == true) {
 			?>
             <div class="row bar" style="text-align: center;">
                 <div class="col-xs-12 green" style="font-size: 35pt; font-weight: 800; color: red;">
