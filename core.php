@@ -22,7 +22,13 @@ if (isset($wallet)) {
 	catch (Exception $e) {
 		$offline = true;
 	}
-//	echo "<script>console.log(" . json_encode($address, JSON_PRETTY_PRINT) . ")</script>";
+	try {
+		$listtransactions = $wallet->listtransactions();
+	}
+	catch (Exception $e) {
+		$offline = true;
+	}
+//	echo "<script>console.log(" . json_encode($listtransactions, JSON_PRETTY_PRINT) . ")</script>";
 	$mnl = file_get_contents('mndatapack.json');
 //	echo "<script>console.log(" . $mnl . ")</script>";
 	$datapack = json_decode($mnl, true);
@@ -36,5 +42,5 @@ function sectohms($ss) {
 	$d = floor(($ss%2592000)/86400);
 	$M = floor($ss/2592000);
 
-	return "$d days, $h hours, $m minutes";
+	return "$d D, $h H, $m M";
 }
