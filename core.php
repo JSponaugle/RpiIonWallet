@@ -1,38 +1,37 @@
 <?php
 require_once('coins.php');
 $wallet = new jsonRPCClient('http://' . $ion['user'] . ':' . $ion['pass'] . '@127.0.0.1:' . $ion['port']);
-$info   = $address = $datapack = [];
+$datapack = [];
 $piview = 1;
 if (isset($wallet)) {
+	$mnl = file_get_contents('mndatapack.json');
+	$datapack = json_decode($mnl, true);
 	try {
-		$info = $wallet->getinfo();
+		$datapack['info'] = $wallet->getinfo();
 	}
 	catch (Exception $e) {
 		$offline = true;
 	}
 //	echo "<script>console.log(" . json_encode($info, JSON_PRETTY_PRINT) . ")</script>";
 	try {
-		$address = $wallet->listaddressgroupings();
+		$datapack['address'] = $wallet->listaddressgroupings();
 	}
 	catch (Exception $e) {
 		$offline = true;
 	}
 	try {
-		$stakinginfo = $wallet->getstakinginfo();
+		$datapack['stakinginfo'] = $wallet->getstakinginfo();
 	}
 	catch (Exception $e) {
 		$offline = true;
 	}
 	try {
-		$listtransactions = $wallet->listtransactions();
+		$datapack['listtransactions'] = $wallet->listtransactions();
 	}
 	catch (Exception $e) {
 		$offline = true;
 	}
 //	echo "<script>console.log(" . json_encode($listtransactions, JSON_PRETTY_PRINT) . ")</script>";
-	$mnl = file_get_contents('mndatapack.json');
-//	echo "<script>console.log(" . $mnl . ")</script>";
-	$datapack = json_decode($mnl, true);
 } else {
 	$offline = true;
 }
