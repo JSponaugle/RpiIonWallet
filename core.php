@@ -2,7 +2,7 @@
 require_once('coins.php');
 $wallet = new jsonRPCClient('http://' . $ion['user'] . ':' . $ion['pass'] . '@127.0.0.1:' . $ion['port']);
 $datapack = [];
-$datapack['secret'] = sha1('username');
+$datapack['secret'] = sha1('MastaYoshigR');
 $piview = 1;
 if (isset($wallet)) {
 	$mnl = file_get_contents('mndatapack.json');

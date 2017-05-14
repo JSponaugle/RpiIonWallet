@@ -11,7 +11,7 @@
 	<div class="col-xs-6 bardataend">
 		<div class="bardatatitle">Reward Drop</div>
 		<div class="bardatadata"><span class="green"><?php
-				if (isset($datapack['mnl']['daysTillRewardDrop'])) echo $datapack['mnl']['daysTillRewardDrop']; ?></span></div>
+				if (isset($datapack['mnl']['daysTillRewardDrop'])) echo $datapack['mnl']['daysTillRewardDrop']['num']." ".$datapack['mnl']['daysTillRewardDrop']['name']; ?></span></div>
 	</div>
 </div>
 <div class="row bar">

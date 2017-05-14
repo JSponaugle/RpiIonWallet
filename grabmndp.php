@@ -1,5 +1,5 @@
 <?php
-$url = "https://masternodes.ionomy.com/datapack";
+$url = "https://masternodes.ionomy.com/api/datapack";
 $mnl = file_get_contents($url);
 file_put_contents('/usr/share/nginx/www/mndatapack.json', $mnl);
 
